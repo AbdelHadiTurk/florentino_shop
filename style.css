@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&display=swap');
+
+body {
+     font-family: 'Bodoni Moda', serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.header {
+  position: relative;
+  border-bottom: 2px solid white;
+
+  height: 75px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  padding: 0 30px;
+  width: 100%;
+}
+
+
+
+
+.florentino{
+  font-size: 40px;
+  
+  color: white;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 10px;
+  text-decoration: none;
+  
+
+}
+
+ .menu-icon {
+  width: 30px;
+  cursor: pointer;
+  padding-right: 15px; /* reduce from 35px */
+}
+
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  background: white;
+  margin: 5px 5px;
+}
+
+.side-menu {
+
+  position: fixed;
+  
+  top: 0;
+
+  right: -200px; /* hidden */
+
+  width: 200px;
+
+  height: 100%;
+
+  background: transparent;
+
+  padding-top: 60px;
+
+  transition: 0.3s;
+
+}
+
+
+/* Menu links */
+
+.side-menu a {
+
+  display: block;
+  font-size: 20px;
+
+  color: white;
+
+  padding: 15px;
+
+  text-decoration: none;
+
+}
+
+
+
+/* When active */
+
+.side-menu.active {
+
+  right: 0;
+  background: black;
+
+}
+
+/* Smooth animation */
+.menu-icon span {
+  display: block;
+  height: 5px;
+  background:white ;
+  margin: 8px -10px;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Animate to X */
+.menu-icon.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+
+html, body {
+  overflow-x: hidden;
+}
+
+img {
+  width: 100vw; /* force exact screen width */
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  background-image: url("image.png");
+  
+
+ /* make sure name is correct */
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+  min-height: 105vh;
+  
+}
+
+.header, .side-menu, img {
+  max-width: 100%;
+}
+
+.button{
+  position: absolute;
+  font-size: 30px;
+  padding: 10px;
+  border: solid;
+  border-radius: 40px;
+  border-color: white;
+  margin-top: 1200px;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+}
+
+.button:hover{
+  text-decoration: underline;
+  border: none;
+}
+
+.intro{
+  position: absolute;
+  margin-top: 1050px;
+  text-align: left;
+  color: white;
+}
+
+
+
+img{
+  position: fixed;
+  margin-top: 300px;
+}
+
+@media (min-width: 768px) {
+
+  /* Show menu as normal horizontal nav */
+  .side-menu {
+    position: static;        /* remove fixed sidebar */
+    height: auto;
+    width: auto;
+    display: flex;           /* horizontal */
+    flex-direction: row;
+    align-items: center;
+    background: none;
+    padding: 0;
+    right: 0;                /* reset */
+  }
+
+  /* Style links for header */
+  .side-menu a {
+    color: white;
+    padding: 0 15px;
+  }
+
+  /* Hide hamburger icon */
+  .menu-icon {
+    display: none;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3); /* dark overlay */
+}
+
+.home:hover{
+  border-bottom: 1px solid white;
+}
+
+
+
+.location:hover{
+  border-bottom: 1px solid white;
+}
+
+.contact:hover{
+  border-bottom: 1px solid white;
+}
+
+

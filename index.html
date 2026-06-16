@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>florentino</title>
+<link rel="stylesheet" href="style.css">
+<script>
+  function toggleMenu(icon) {
+    icon.classList.toggle("active"); // animate icon
+    document.getElementById("menu").classList.toggle("active"); // open menu
+   }
+</script>
+
+
+</head>
+
+<body>
+
+  <div class="header">
+  <a href="" class="florentino">florentino</a>
+  <div class="menu-icon" onclick="toggleMenu(this)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="side-menu" id="menu">
+    <a href="index.html" class="home">Home</a>
+    <a href="https://maps.app.goo.gl/tY8FYDFPSHYvHxPS7?g_st=ic" class="location" target="_blank">location</a>
+    <a href="https://wa.me/96103505664" class="contact">Contact</a>
+  </div>
+  
+  <h1 class="intro">Explore Our Newest Clothing Collection</h1>
+  <a href="https://www.instagram.com/florentino_shop?igsh=MXZsaGo4eXUyNmszdw==" class="button"><div>view collection→</div></a>
+  
+</body>
+
+</html>
